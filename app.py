@@ -801,7 +801,7 @@ municipios_lista = sorted(df["municipio_nome"].dropna().astype(str).unique().tol
 st.markdown("""
 <div class="hero">
   <div class="hero-tag">📊 Dados públicos · PNCP + IBGE + SICONFI · Bahia 2024–2026</div>
-  <h1 class="hero-title">Fiscal Storyteller BA</h1>
+  <h1 class="hero-title">Gastos Reais BAHIA</h1>
   <p class="hero-sub">
     Transformando contratos públicos em histórias fiscais.
     Descubra como seu município gasta com shows, eventos e cultura.
