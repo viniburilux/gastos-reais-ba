@@ -21,7 +21,7 @@ import re
 # CONFIG
 # ─────────────────────────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="Fiscal Storyteller BA",
+    page_title="Gastos Reais Bahia",
     page_icon="📊",
     layout="wide",
     initial_sidebar_state="collapsed",
@@ -478,7 +478,7 @@ outros mecanismos não registrados no PNCP.
 <strong>{nome}</strong> possui <strong>{pop_str}</strong> e PIB estimado de <strong>{pib_str}</strong>,
 com uma Receita Corrente Líquida (RCL) de <strong>{rcl_str}</strong>.
 
-No período analisado (2024–2026), o município realizou <strong>{art_n} contrato{'s' if art_n != 1 else ''} artístico{'s' if art_n != 1 else ''}</strong>
+No período analisado (2025–2026), o município realizou <strong>{art_n} contrato{'s' if art_n != 1 else ''} artístico{'s' if art_n != 1 else ''}</strong>
 via PNCP, totalizando <strong>{art_v_str}</strong> em shows e eventos.{sub_destaque}
 
 Isso representa <strong>{art_pc_str} por habitante</strong> e <strong>{art_pct_str} da receita municipal</strong>.
