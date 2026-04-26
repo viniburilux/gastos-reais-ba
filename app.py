@@ -800,7 +800,7 @@ municipios_lista = sorted(df["municipio_nome"].dropna().astype(str).unique().tol
 # ─── HERO ───
 st.markdown("""
 <div class="hero">
-  <div class="hero-tag">📊 Dados públicos · PNCP + IBGE + SICONFI · Bahia 2024–2026</div>
+  <div class="hero-tag">📊 Dados públicos · PNCP + IBGE + SICONFI · Bahia 2025–2026</div>
   <h1 class="hero-title">Gastos Reais BAHIA</h1>
   <p class="hero-sub">
     Transformando contratos públicos em histórias fiscais.
@@ -988,9 +988,9 @@ st.markdown("""
 <div style="margin-top:4rem;padding-top:2rem;border-top:1px solid #2A2D3E;
      text-align:center;color:#3A3D50;font-family:'DM Mono',monospace;font-size:0.72rem;
      line-height:2;">
-  Dados: Portal Nacional de Contratações Públicas (PNCP) · IBGE · SICONFI — 2024/2026<br>
+  Dados: Portal Nacional de Contratações Públicas (PNCP) · IBGE · SICONFI — 2025/2026<br>
   Apenas contratos municipais válidos, excluídos outliers e contratos não-municipais.<br>
-  Fiscal Storyteller BA · Dados abertos para transparência pública
+  Gastos Reais BAHIA · Dados abertos para transparência pública
 </div>
 """, unsafe_allow_html=True)
 
