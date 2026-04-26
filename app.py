@@ -795,7 +795,7 @@ def generate_share_image(stats, nome):
 # ─────────────────────────────────────────────────────────────────────────────
 df = load_data()
 summary = build_municipio_summary(df)
-municipios_lista = sorted(df["municipio_nome"].unique().tolist())
+municipios_lista = sorted(df["municipio_nome"].dropna().astype(str).unique().tolist())
 
 # ─── HERO ───
 st.markdown("""
