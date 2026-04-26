@@ -993,3 +993,4 @@ st.markdown("""
   Fiscal Storyteller BA · Dados abertos para transparência pública
 </div>
 """, unsafe_allow_html=True)
+
