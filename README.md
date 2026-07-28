@@ -1,5 +1,6 @@
 # LuxVerso Public Procurement Analytics
 
+```
            PNCP
              │
              ▼
@@ -19,31 +20,32 @@
              │
              ▼
  Dashboards • Research • Monitoring
- 
-Open infrastructure for municipal public procurement analysis in Brazil.
+```
 
-LuxVerso Public Finance is an open research initiative that integrates multiple Brazilian public datasets into a unified analytical database for exploring municipal public spending.
+Open analytical infrastructure for exploring Brazilian municipal public procurement through integrated public datasets.
 
-The project combines data from the National Public Procurement Portal (PNCP), IBGE and SICONFI to create contextualized datasets that enable large-scale analyses of municipal procurement.
+LuxVerso Public Procurement Analytics is an open research initiative that transforms fragmented government data into analysis-ready datasets for studying municipal procurement.
 
-The current public release focuses on direct public contracts (Inexigibilidade de Licitação) in the state of Bahia.
+The project integrates information from the **Portal Nacional de Contratações Públicas (PNCP)**, **IBGE** and **SICONFI**, creating a unified analytical layer for public finance research, transparency initiatives and exploratory data analysis.
+
+The current public repository presents the first implementation of this infrastructure using municipal direct procurement contracts from **Bahia (2025)**.
 
 ---
 
-## Why this project exists
+# Why this project exists
 
-Public procurement data is publicly available, but it is fragmented across multiple government systems and difficult to analyze at scale.
+Brazilian procurement data is publicly available, but it is distributed across multiple government systems and difficult to analyze at scale.
 
-LuxVerso Public Finance automates the entire process of:
+LuxVerso Public Procurement Analytics automates the complete analytical workflow by:
 
-- collecting procurement data
-- cleaning and standardizing records
-- classifying contracts
-- integrating socioeconomic indicators
-- integrating municipal fiscal indicators
-- generating analytical datasets ready for exploration
+- collecting procurement records from the PNCP API;
+- cleaning and standardizing government data;
+- classifying procurement objects;
+- integrating demographic indicators from IBGE;
+- integrating municipal fiscal indicators from SICONFI;
+- generating analytical datasets ready for research and visualization.
 
-Instead of providing raw government data, the project provides a structured analytical layer over Brazilian public finance.
+Instead of exposing raw government records, the project provides a structured analytical layer that supports exploration and comparative analysis.
 
 ---
 
@@ -51,27 +53,29 @@ Instead of providing raw government data, the project provides a structured anal
 
 The current pipeline performs:
 
-- Automatic collection from the PNCP API
-- Data normalization
-- Contract classification
+- Automatic data collection from the PNCP API
+- Data normalization and validation
+- Procurement object classification
 - Municipal identification
 - Integration with IBGE indicators
-- Integration with SICONFI fiscal data
+- Integration with SICONFI fiscal information
 - Generation of analysis-ready datasets
 
-The pipeline was designed to support continuous monitoring and expansion to all Brazilian states.
+The pipeline architecture was designed to support continuous monitoring and future expansion to additional procurement modalities and all Brazilian states.
 
 ---
 
-# Current Dataset
+# Current Public Dataset
 
-The public repository currently includes an analytical dataset covering municipalities in Bahia.
+The repository currently includes an analytical dataset covering **municipal direct procurement contracts in Bahia during 2025**.
 
 Integrated sources include:
 
-- PNCP
-- IBGE
-- SICONFI
+- Portal Nacional de Contratações Públicas (PNCP)
+- Instituto Brasileiro de Geografia e Estatística (IBGE)
+- Sistema de Informações Contábeis e Fiscais do Setor Público Brasileiro (SICONFI)
+
+Each record combines the original procurement information with contextual socioeconomic and fiscal indicators.
 
 Variables include:
 
@@ -79,12 +83,13 @@ Variables include:
 - municipality identifiers
 - supplier information
 - contract values
-- population
+- contract classification
+- municipal population
 - GDP
 - GDP per capita
 - fiscal revenue
 - public expenditure indicators
-- derived spending metrics
+- derived analytical metrics
 
 ---
 
@@ -92,12 +97,12 @@ Variables include:
 
 The current dataset enables analyses such as:
 
-- Which municipalities spend more per capita?
+- Which municipalities spend more per capita through direct procurement?
 - Which suppliers appear across multiple municipalities?
-- How concentrated are direct public contracts?
+- How concentrated are procurement contracts?
 - How does procurement vary with municipal population?
-- Is procurement associated with fiscal capacity?
-- Which municipalities spend a larger share of revenue through direct contracting?
+- Is procurement associated with municipal fiscal capacity?
+- Which municipalities allocate a larger share of revenue to specific procurement categories?
 - How do procurement patterns evolve over time?
 
 These examples illustrate only part of the analytical possibilities created by integrating multiple public datasets.
@@ -110,10 +115,11 @@ These examples illustrate only part of the analytical possibilities created by i
 
 https://viniburilux.github.io/explorador-dados-bahia/
 
-Interactive exploration of municipal procurement data including:
+Interactive exploration of procurement data, including:
 
 - municipalities
 - suppliers
+- procurement categories
 - contract values
 - spending evolution
 - contract classification
@@ -124,7 +130,7 @@ Interactive exploration of municipal procurement data including:
 
 https://viniburilux.github.io/monitor-gastos-pncp/
 
-Overview of the data infrastructure and exploratory analyses built from the integrated datasets.
+Overview of the analytical infrastructure and exploratory findings produced from the integrated datasets.
 
 ---
 
@@ -138,6 +144,9 @@ pipeline/
     data collection
     normalization
     integration
+
+docs/
+    public dashboards
 ```
 
 ---
@@ -154,7 +163,7 @@ https://www.gov.br/pncp
 
 ### IBGE
 
-Municipal demographic and economic indicators.
+Municipal demographic and socioeconomic indicators.
 
 https://www.ibge.gov.br
 
@@ -173,11 +182,31 @@ https://siconfi.tesouro.gov.br
 Current public implementation:
 
 - Bahia
+- Municipal procurement
 - Direct procurement (Inexigibilidade)
-- Municipal contracts
-- 2025–2026
+- 2025
 
-The underlying infrastructure was designed to support expansion to additional procurement modalities and all Brazilian states.
+The underlying infrastructure has been designed for continuous data collection and future expansion to additional procurement categories, years and Brazilian states.
+
+---
+
+# Roadmap
+
+Current public implementation:
+
+- ✅ Bahia analytical dataset
+- ✅ PNCP integration
+- ✅ IBGE integration
+- ✅ SICONFI integration
+- ✅ Public exploratory dashboards
+
+Next development stages:
+
+- National procurement dataset
+- Continuous monitoring pipeline
+- Additional procurement modalities
+- Public APIs
+- Advanced analytical dashboards
 
 ---
 
@@ -186,36 +215,37 @@ The underlying infrastructure was designed to support expansion to additional pr
 The project may support:
 
 - public finance research
-- data journalism
-- transparency initiatives
 - procurement monitoring
 - municipal benchmarking
-- public policy analysis
+- transparency initiatives
+- data journalism
 - academic research
 - exploratory auditing
+- public policy analysis
 
 ---
 
 # About LuxVerso
 
-LuxVerso develops open infrastructures for exploring complex public datasets through automated data collection, integration and analysis.
+LuxVerso develops open analytical infrastructures for exploring complex public datasets through automated collection, integration and analysis.
 
-Current areas include:
+Current research areas include:
 
-- public procurement
+- public procurement analytics
 - municipal finance
 - government open data
 - analytical data infrastructure
+- computational social science
 
 ---
 
 # License
 
-Data
+### Data
 
 CC BY 4.0
 
-Code
+### Code
 
 MIT License
 
@@ -223,7 +253,7 @@ MIT License
 
 # Contact
 
-Vinícius Buri
+**Vinícius Buri**
 
 LuxVerso Research
 
