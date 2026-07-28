@@ -1,139 +1,212 @@
-# LuxVerso Public Finance
-Monitor automatizado de contratos públicos diretos  
-Bahia · 2025–2026
+# LuxVerso Public Procurement Analytics
 
-LuxVerso Public Finance é uma infraestrutura experimental de análise de contratações públicas municipais baseada em dados abertos do governo brasileiro.
+Open infrastructure for municipal public procurement analysis in Brazil.
 
-O sistema coleta automaticamente dados do **Portal Nacional de Contratações Públicas (PNCP)** e os organiza em datasets analíticos que permitem explorar padrões de gasto público em escala municipal.
+LuxVerso Public Finance is an open research initiative that integrates multiple Brazilian public datasets into a unified analytical database for exploring municipal public spending.
 
-A primeira implementação analisa contratos de **inexigibilidade de licitação** nos municípios da Bahia entre 2025 e 2026.
+The project combines data from the National Public Procurement Portal (PNCP), IBGE and SICONFI to create contextualized datasets that enable large-scale analyses of municipal procurement.
 
----
-
-## O que o sistema faz
-
-O pipeline desenvolvido realiza:
-
-1. Coleta automática de contratos via API do PNCP
-2. Normalização e limpeza de dados
-3. Classificação de contratos por categoria
-4. Integração com indicadores socioeconômicos (IBGE)
-5. Integração com dados fiscais municipais (SICONFI)
-6. Geração de datasets analíticos exploráveis
-
-Isso permite analisar contratos públicos dentro do contexto econômico e fiscal de cada município.
+The current public release focuses on direct public contracts (Inexigibilidade de Licitação) in the state of Bahia.
 
 ---
 
-## Exploradores públicos
+## Why this project exists
 
-Duas interfaces públicas permitem explorar os dados.
+Public procurement data is publicly available, but it is fragmented across multiple government systems and difficult to analyze at scale.
 
-### Explorador de contratos artísticos
+LuxVerso Public Finance automates the entire process of:
+
+- collecting procurement data
+- cleaning and standardizing records
+- classifying contracts
+- integrating socioeconomic indicators
+- integrating municipal fiscal indicators
+- generating analytical datasets ready for exploration
+
+Instead of providing raw government data, the project provides a structured analytical layer over Brazilian public finance.
+
+---
+
+# Data Pipeline
+
+The current pipeline performs:
+
+- Automatic collection from the PNCP API
+- Data normalization
+- Contract classification
+- Municipal identification
+- Integration with IBGE indicators
+- Integration with SICONFI fiscal data
+- Generation of analysis-ready datasets
+
+The pipeline was designed to support continuous monitoring and expansion to all Brazilian states.
+
+---
+
+# Current Dataset
+
+The public repository currently includes an analytical dataset covering municipalities in Bahia.
+
+Integrated sources include:
+
+- PNCP
+- IBGE
+- SICONFI
+
+Variables include:
+
+- procurement information
+- municipality identifiers
+- supplier information
+- contract values
+- population
+- GDP
+- GDP per capita
+- fiscal revenue
+- public expenditure indicators
+- derived spending metrics
+
+---
+
+# Example Research Questions
+
+The current dataset enables analyses such as:
+
+- Which municipalities spend more per capita?
+- Which suppliers appear across multiple municipalities?
+- How concentrated are direct public contracts?
+- How does procurement vary with municipal population?
+- Is procurement associated with fiscal capacity?
+- Which municipalities spend a larger share of revenue through direct contracting?
+- How do procurement patterns evolve over time?
+
+These examples illustrate only part of the analytical possibilities created by integrating multiple public datasets.
+
+---
+
+# Public Explorers
+
+## Municipal Procurement Explorer
 
 https://viniburilux.github.io/explorador-dados-bahia/
 
-Permite explorar:
-- municípios que mais gastam em shows
-- artistas contratados em múltiplas cidades
-- evolução mensal de gastos
-- cachês individuais
+Interactive exploration of municipal procurement data including:
 
-### Monitor de gastos públicos
+- municipalities
+- suppliers
+- contract values
+- spending evolution
+- contract classification
+
+---
+
+## Public Finance Monitor
 
 https://viniburilux.github.io/monitor-gastos-pncp/
 
-Apresenta a infraestrutura de coleta e os principais achados iniciais sobre contratos municipais.
+Overview of the data infrastructure and exploratory analyses built from the integrated datasets.
 
 ---
 
-## Estrutura dos dados
-
-O repositório contém o dataset analítico utilizado nas análises públicas.
-
-Dataset principal:
+# Repository Structure
 
 ```
-data/pncp_ibge_siconfi_BA_final.csv
+data/
+    pncp_ibge_siconfi_BA_final.csv
+
+pipeline/
+    data collection
+    normalization
+    integration
 ```
 
-Esse dataset inclui:
-- contratos do PNCP
-- classificação de objeto
-- identificação municipal
-- indicadores populacionais
-- indicadores fiscais
+---
+
+# Data Sources
+
+### Portal Nacional de Contratações Públicas (PNCP)
+
+Primary source of procurement contracts.
+
+https://www.gov.br/pncp
 
 ---
 
-## Sobre os números apresentados
+### IBGE
 
-Os números do projeto variam conforme o **escopo analítico utilizado**.
+Municipal demographic and economic indicators.
 
-| Escopo | Contratos |
-|---|---|
-| Dataset bruto PNCP | ~28.306 contratos |
-| Dataset municipal filtrado | ~21.797 contratos |
-| Dataset limpo analisado | ~14.275 contratos |
-
-As diferenças refletem:
-- remoção de registros não municipais
-- remoção de duplicações
-- identificação de outliers
-- classificação de contratos relevantes
-
-Todos os critérios estão documentados no notebook de metodologia.
+https://www.ibge.gov.br
 
 ---
 
-## Fontes de dados
+### SICONFI — Tesouro Nacional
 
-**Portal Nacional de Contratações Públicas (PNCP)**  
-https://www.gov.br/pncp  
-Fonte primária de contratos públicos.
+Municipal fiscal indicators.
 
-**IBGE**  
-https://www.ibge.gov.br  
-Indicadores municipais para contextualização socioeconômica.
-
-**SICONFI – Tesouro Nacional**  
-https://siconfi.tesouro.gov.br  
-Dados fiscais para contextualizar capacidade orçamentária municipal.
+https://siconfi.tesouro.gov.br
 
 ---
 
-## Status do projeto
+# Current Scope
 
-Este repositório representa a primeira implementação do sistema para o estado da Bahia.
+Current public implementation:
 
-Próximas etapas:
-- expansão para outros estados brasileiros
-- monitoramento contínuo de contratos
-- detecção automatizada de padrões de gasto
-- API pública para exploração dos dados
+- Bahia
+- Direct procurement (Inexigibilidade)
+- Municipal contracts
+- 2025–2026
 
----
-
-## Sobre o LuxVerso
-
-LuxVerso é uma iniciativa independente de pesquisa aplicada focada em explorar grandes sistemas de dados públicos.
-
-Áreas atuais:
-- análise de gastos públicos municipais
-- integração de datasets governamentais
-- análise automatizada de contratos públicos
+The underlying infrastructure was designed to support expansion to additional procurement modalities and all Brazilian states.
 
 ---
 
-## Licença
+# Potential Applications
 
-Dados: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)  
-Código: [MIT License](https://opensource.org/licenses/MIT)
+The project may support:
+
+- public finance research
+- data journalism
+- transparency initiatives
+- procurement monitoring
+- municipal benchmarking
+- public policy analysis
+- academic research
+- exploratory auditing
 
 ---
 
-## Contato
+# About LuxVerso
 
-Vinícius Buri  
-LuxVerso Research · Salvador, Bahia  
+LuxVerso develops open infrastructures for exploring complex public datasets through automated data collection, integration and analysis.
+
+Current areas include:
+
+- public procurement
+- municipal finance
+- government open data
+- analytical data infrastructure
+
+---
+
+# License
+
+Data
+
+CC BY 4.0
+
+Code
+
+MIT License
+
+---
+
+# Contact
+
+Vinícius Buri
+
+LuxVerso Research
+
+Salvador — Bahia — Brazil
+
 viniburilux@gmail.com
