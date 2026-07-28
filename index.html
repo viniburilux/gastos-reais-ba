@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Radar Shows Públicos — Bahia 2026 · LuxVerso Research</title>
-<meta name="description" content="Prefeituras baianas gastaram R$ 160 milhões em shows nos primeiros 4 meses de 2026. O São João ainda nem começou.">
+<title>Case Study #1: Contratações Artísticas — Bahia 2025 · LuxVerso Research</title>
+<meta name="description" content="R$ 529,5 milhões em contratações artísticas por prefeituras baianas em 2025. O primeiro estudo público produzido pela infraestrutura LuxVerso de análise de contratações municipais.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=JetBrains+Mono:wght@400;600&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
@@ -32,7 +32,6 @@
     overflow-x: hidden;
   }
 
-  /* GRAIN OVERLAY */
   body::before {
     content: '';
     position: fixed;
@@ -43,7 +42,6 @@
     opacity: 0.4;
   }
 
-  /* HEADER STRIP */
   .header-strip {
     border-bottom: 1px solid var(--border);
     padding: 12px 24px;
@@ -55,464 +53,205 @@
     color: var(--muted);
     letter-spacing: 0.05em;
   }
-  .header-strip .brand {
-    color: var(--amber);
-    font-weight: 600;
-  }
+  .header-strip .brand { color: var(--amber); font-weight: 600; }
 
-  /* HERO */
-  .hero {
-    padding: 64px 24px 48px;
-    max-width: 900px;
-    margin: 0 auto;
-    position: relative;
-  }
+  .hero { padding: 64px 24px 48px; max-width: 900px; margin: 0 auto; position: relative; }
   .hero-kicker {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    color: var(--amber);
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    font-size: 11px; color: var(--amber); letter-spacing: 0.15em;
+    text-transform: uppercase; margin-bottom: 20px;
+    display: flex; align-items: center; gap: 10px;
   }
-  .hero-kicker::before {
-    content: '';
-    display: inline-block;
-    width: 24px;
-    height: 1px;
-    background: var(--amber);
-  }
+  .hero-kicker::before { content: ''; display: inline-block; width: 24px; height: 1px; background: var(--amber); }
   .hero h1 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(42px, 8vw, 88px);
-    font-weight: 900;
-    line-height: 0.95;
-    letter-spacing: -0.02em;
+    font-size: clamp(40px, 7.5vw, 82px);
+    font-weight: 900; line-height: 0.97; letter-spacing: -0.02em;
     margin-bottom: 32px;
   }
-  .hero h1 em {
-    font-style: italic;
-    color: var(--amber);
-  }
-  .hero-sub {
-    font-size: 18px;
-    color: var(--muted);
-    max-width: 560px;
-    line-height: 1.6;
-    font-weight: 400;
-  }
-  .hero-sub strong {
-    color: var(--white);
-  }
+  .hero h1 em { font-style: italic; color: var(--amber); }
+  .hero-sub { font-size: 18px; color: var(--muted); max-width: 600px; line-height: 1.6; font-weight: 400; }
+  .hero-sub strong { color: var(--white); }
 
-  /* BIG NUMBERS ROW */
   .numbers-row {
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: grid; grid-template-columns: repeat(4, 1fr);
     margin: 48px 0 0;
   }
-  .number-cell {
-    padding: 28px 24px;
-    border-right: 1px solid var(--border);
-    animation: fadeUp 0.6s ease both;
-  }
+  .number-cell { padding: 28px 24px; border-right: 1px solid var(--border); animation: fadeUp 0.6s ease both; }
   .number-cell:last-child { border-right: none; }
   .number-cell .n {
     font-family: 'JetBrains Mono', monospace;
-    font-size: clamp(22px, 4vw, 38px);
-    font-weight: 600;
-    color: var(--amber);
-    display: block;
-    line-height: 1.1;
+    font-size: clamp(20px, 3.6vw, 34px);
+    font-weight: 600; color: var(--amber); display: block; line-height: 1.1;
   }
-  .number-cell .label {
-    font-size: 12px;
-    color: var(--muted);
-    margin-top: 6px;
-    letter-spacing: 0.03em;
-  }
+  .number-cell .label { font-size: 12px; color: var(--muted); margin-top: 6px; letter-spacing: 0.03em; }
 
-  /* SECTION */
-  .section {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 64px 24px;
-    border-bottom: 1px solid var(--border);
-  }
+  .section { max-width: 900px; margin: 0 auto; padding: 64px 24px; border-bottom: 1px solid var(--border); }
   .section-label {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
-    color: var(--amber);
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    margin-bottom: 28px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    font-size: 10px; color: var(--amber); letter-spacing: 0.2em; text-transform: uppercase;
+    margin-bottom: 28px; display: flex; align-items: center; gap: 12px;
   }
-  .section-label::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: var(--border);
-  }
+  .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
   .section h2 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(28px, 5vw, 48px);
-    font-weight: 700;
-    line-height: 1.1;
-    margin-bottom: 20px;
+    font-size: clamp(26px, 4.6vw, 44px); font-weight: 700; line-height: 1.15; margin-bottom: 20px;
   }
-  .section p {
-    color: var(--muted);
-    font-size: 16px;
-    line-height: 1.7;
-    max-width: 640px;
-  }
+  .section p { color: var(--muted); font-size: 16px; line-height: 1.7; max-width: 640px; }
   .section p strong { color: var(--white); }
 
-  /* CALLOUT BOX */
   .callout {
-    background: var(--bg3);
-    border-left: 3px solid var(--amber);
-    padding: 20px 24px;
-    margin: 28px 0;
-    font-size: 15px;
-    color: var(--white);
-    line-height: 1.6;
+    background: var(--bg3); border-left: 3px solid var(--amber);
+    padding: 20px 24px; margin: 28px 0; font-size: 15px; color: var(--white); line-height: 1.6;
   }
   .callout strong { color: var(--amber); }
+  .callout.muted-border { border-left-color: var(--muted); }
 
-  /* RANKING TABLE */
-  .rank-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 28px;
-    font-size: 14px;
-  }
+  .rank-table { width: 100%; border-collapse: collapse; margin-top: 28px; font-size: 14px; }
   .rank-table thead th {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.1em;
-    color: var(--muted);
-    text-align: left;
-    padding: 10px 12px;
-    border-bottom: 1px solid var(--border);
-    text-transform: uppercase;
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: var(--muted);
+    text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); text-transform: uppercase;
   }
-  .rank-table tbody tr {
-    border-bottom: 1px solid var(--border);
-    transition: background 0.15s;
-  }
+  .rank-table tbody tr { border-bottom: 1px solid var(--border); transition: background 0.15s; }
   .rank-table tbody tr:hover { background: var(--bg3); }
-  .rank-table tbody td {
-    padding: 14px 12px;
-    vertical-align: middle;
-  }
-  .rank-num {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    color: var(--muted);
-    width: 32px;
-  }
-  .rank-name {
-    font-weight: 600;
-    font-size: 15px;
-    letter-spacing: 0.01em;
-  }
-  .rank-value {
-    font-family: 'JetBrains Mono', monospace;
-    color: var(--amber);
-    font-size: 14px;
-    text-align: right;
-  }
-  .rank-sub {
-    font-size: 11px;
-    color: var(--muted);
-    margin-top: 2px;
-  }
+  .rank-table tbody td { padding: 14px 12px; vertical-align: middle; }
+  .rank-num { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); width: 32px; }
+  .rank-name { font-weight: 600; font-size: 15px; letter-spacing: 0.01em; }
+  .rank-value { font-family: 'JetBrains Mono', monospace; color: var(--amber); font-size: 14px; text-align: right; }
+  .rank-sub { font-size: 11px; color: var(--muted); margin-top: 2px; }
   .bar-cell { width: 120px; padding-right: 0; }
-  .bar-bg {
-    background: var(--border);
-    height: 4px;
-    border-radius: 2px;
-    overflow: hidden;
-  }
-  .bar-fill {
-    height: 100%;
-    background: var(--amber);
-    border-radius: 2px;
-    transition: width 1s ease;
-  }
+  .bar-bg { background: var(--border); height: 4px; border-radius: 2px; overflow: hidden; }
+  .bar-fill { height: 100%; background: var(--amber); border-radius: 2px; transition: width 1s ease; }
 
-  /* OUTLIER CARDS */
-  .outlier-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 16px;
-    margin-top: 28px;
-  }
-  .outlier-card {
-    background: var(--bg2);
-    border: 1px solid var(--border);
-    padding: 24px;
-    position: relative;
-    overflow: hidden;
-    transition: border-color 0.2s;
-  }
+  .outlier-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; margin-top: 28px; }
+  .outlier-card { background: var(--bg2); border: 1px solid var(--border); padding: 24px; position: relative; overflow: hidden; transition: border-color 0.2s; }
   .outlier-card:hover { border-color: var(--amber); }
-  .outlier-card::before {
-    content: '⚠';
-    position: absolute;
-    top: 12px;
-    right: 16px;
-    font-size: 18px;
-    opacity: 0.15;
-  }
-  .outlier-city {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    font-weight: 700;
-    margin-bottom: 4px;
-  }
-  .outlier-state {
-    font-size: 11px;
-    color: var(--muted);
-    margin-bottom: 16px;
-    font-family: 'JetBrains Mono', monospace;
-  }
-  .outlier-stat {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 28px;
-    font-weight: 600;
-    color: var(--red);
-    line-height: 1;
-    margin-bottom: 6px;
-  }
-  .outlier-desc {
-    font-size: 13px;
-    color: var(--muted);
-    line-height: 1.5;
-  }
+  .outlier-city { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+  .outlier-state { font-size: 11px; color: var(--muted); margin-bottom: 16px; font-family: 'JetBrains Mono', monospace; }
+  .outlier-stat { font-family: 'JetBrains Mono', monospace; font-size: 26px; font-weight: 600; color: var(--red); line-height: 1; margin-bottom: 6px; }
+  .outlier-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
   .outlier-desc strong { color: var(--white); }
 
-  /* SEASONAL CHART */
-  .season-wrap {
-    margin-top: 32px;
-    background: var(--bg2);
-    border: 1px solid var(--border);
-    padding: 28px;
-  }
-  .season-bars {
-    display: flex;
-    align-items: flex-end;
-    gap: 8px;
-    height: 120px;
-    margin: 24px 0 8px;
-  }
-  .season-bar-wrap {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    justify-content: flex-end;
-    gap: 6px;
-  }
-  .season-bar {
-    width: 100%;
-    background: var(--border);
-    border-radius: 3px 3px 0 0;
-    position: relative;
-    transition: background 0.3s;
-  }
+  .season-wrap { margin-top: 32px; background: var(--bg2); border: 1px solid var(--border); padding: 28px; }
+  .season-bars { display: flex; align-items: flex-end; gap: 8px; height: 120px; margin: 24px 0 8px; }
+  .season-bar-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: flex-end; gap: 6px; }
+  .season-bar { width: 100%; background: var(--border); border-radius: 3px 3px 0 0; position: relative; transition: background 0.3s; min-height: 2px; }
   .season-bar.highlight { background: var(--amber); }
   .season-bar.dim { background: var(--bg3); border: 1px solid var(--border); }
-  .season-bar.future { background: var(--border); border: 1px dashed var(--amber-dim); }
-  .season-label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
-    color: var(--muted);
-    text-align: center;
-  }
-  .season-val {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 9px;
-    color: var(--white);
-    text-align: center;
-    opacity: 0.7;
-  }
-  .season-annotation {
-    font-size: 12px;
-    color: var(--muted);
-    margin-top: 8px;
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  .season-annotation span {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
+  .season-bar.partial { background: var(--border); border: 1px dashed var(--amber-dim); }
+  .season-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); text-align: center; }
+  .season-val { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--white); text-align: center; opacity: 0.7; }
+  .season-annotation { font-size: 12px; color: var(--muted); margin-top: 8px; display: flex; gap: 20px; flex-wrap: wrap; }
+  .season-annotation span { display: flex; align-items: center; gap: 6px; }
   .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
   .dot.amber { background: var(--amber); }
   .dot.dim-dot { background: var(--bg3); border: 1px solid var(--border); }
   .dot.dashed { background: transparent; border: 1px dashed var(--amber-dim); border-radius: 50%; }
 
-  /* CACHE TABLE */
-  .cache-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 0;
-    border-bottom: 1px solid var(--border);
-    gap: 16px;
-  }
+  .cache-item { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); gap: 16px; }
   .cache-item:last-child { border-bottom: none; }
-  .cache-pos {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 32px;
-    font-weight: 600;
-    color: var(--border);
-    width: 48px;
-    flex-shrink: 0;
-  }
+  .cache-pos { font-family: 'JetBrains Mono', monospace; font-size: 32px; font-weight: 600; color: var(--border); width: 48px; flex-shrink: 0; }
   .cache-info { flex: 1; }
-  .cache-artist {
-    font-family: 'Playfair Display', serif;
-    font-size: 20px;
-    font-weight: 700;
-  }
-  .cache-context {
-    font-size: 12px;
-    color: var(--muted);
-    margin-top: 2px;
-    font-family: 'JetBrains Mono', monospace;
-  }
-  .cache-val {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--amber);
-    text-align: right;
-    flex-shrink: 0;
-  }
+  .cache-artist { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; }
+  .cache-context { font-size: 12px; color: var(--muted); margin-top: 2px; font-family: 'JetBrains Mono', monospace; }
+  .cache-val { font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 600; color: var(--amber); text-align: right; flex-shrink: 0; }
 
-  /* NETWORK / ARTISTS */
-  .artist-row {
-    display: flex;
-    align-items: center;
-    padding: 12px 0;
-    border-bottom: 1px solid var(--border);
-    gap: 16px;
-  }
+  .artist-row { display: flex; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--border); gap: 16px; }
   .artist-row:last-child { border-bottom: none; }
-  .artist-pos {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    color: var(--muted);
-    width: 24px;
-  }
-  .artist-name {
-    font-weight: 600;
-    font-size: 15px;
-    flex: 1;
-  }
-  .artist-cities {
-    display: flex;
-    gap: 4px;
-  }
-  .city-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--amber);
-    opacity: 0.8;
-  }
-  .artist-val {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 13px;
-    color: var(--amber);
-    text-align: right;
-    min-width: 80px;
-  }
-  .artist-sub {
-    font-size: 11px;
-    color: var(--muted);
-    text-align: right;
-    min-width: 80px;
-  }
+  .artist-pos { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); width: 24px; }
+  .artist-name { font-weight: 600; font-size: 15px; flex: 1; }
+  .artist-cities { display: flex; gap: 4px; flex-wrap: wrap; max-width: 100px; }
+  .city-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--amber); opacity: 0.8; }
+  .artist-val { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--amber); text-align: right; min-width: 80px; }
+  .artist-sub { font-size: 11px; color: var(--muted); text-align: right; min-width: 80px; }
 
-  /* INEXIGIBILIDADE BOX */
-  .context-box {
-    background: var(--bg3);
-    border: 1px solid var(--border);
-    padding: 32px;
-    margin-top: 32px;
-  }
-  .context-box h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 16px;
-  }
-  .context-box p {
-    color: var(--muted);
-    line-height: 1.7;
-    font-size: 15px;
-  }
+  .context-box { background: var(--bg3); border: 1px solid var(--border); padding: 32px; margin-top: 32px; }
+  .context-box h3 { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; margin-bottom: 16px; }
+  .context-box p { color: var(--muted); line-height: 1.7; font-size: 15px; }
   .context-box p + p { margin-top: 12px; }
 
-  /* FOOTER */
-  .footer {
-    border-top: 1px solid var(--border);
-    padding: 32px 24px;
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 24px;
-    flex-wrap: wrap;
-  }
-  .footer-brand {
+  .cat-list { margin-top: 28px; }
+  .cat-row { display: flex; align-items: center; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--border); }
+  .cat-row:last-child { border-bottom: none; }
+  .cat-row.is-shows .cat-name { color: var(--amber); }
+  .cat-name { width: 150px; flex-shrink: 0; font-weight: 600; font-size: 14px; }
+  .cat-bar-bg { flex: 1; background: var(--bg3); height: 22px; position: relative; }
+  .cat-bar-fill { height: 100%; background: var(--border); }
+  .cat-row.is-shows .cat-bar-fill { background: var(--amber); }
+  .cat-val { width: 130px; text-align: right; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--muted); flex-shrink: 0; }
+  .cat-row.is-shows .cat-val { color: var(--amber); }
+
+  .reveal-hero {
     font-family: 'Playfair Display', serif;
-    font-size: 20px;
+    font-size: clamp(22px, 3.4vw, 32px);
     font-weight: 700;
-    margin-bottom: 6px;
+    line-height: 1.3;
+    margin: 8px 0 8px;
   }
-  .footer-meta {
+  .reveal-hero em { color: var(--amber); font-style: italic; }
+
+  .pill-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+  .pill {
+    font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--white);
+    border: 1px solid var(--border); padding: 8px 14px; border-radius: 20px;
+  }
+  .pill.active { border-color: var(--amber); color: var(--amber); }
+
+  /* PIPELINE DIAGRAM */
+  .pipeline-wrap { margin-top: 32px; }
+  .pipeline-steps { display: flex; flex-direction: column; }
+  .pipeline-step {
+    display: flex; align-items: center; gap: 20px;
+    padding: 16px 0; border-bottom: 1px solid var(--border);
+  }
+  .pipeline-step:last-child { border-bottom: none; }
+  .pipeline-num {
+    font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--amber);
+    width: 28px; flex-shrink: 0; border: 1px solid var(--border); border-radius: 50%;
+    height: 28px; display: flex; align-items: center; justify-content: center;
+  }
+  .pipeline-body { flex: 1; }
+  .pipeline-name { font-weight: 600; font-size: 16px; }
+  .pipeline-desc { font-size: 13px; color: var(--muted); margin-top: 2px; }
+  .pipeline-tag {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted);
+    border: 1px solid var(--border); padding: 4px 10px; border-radius: 12px; flex-shrink: 0;
+  }
+
+  .badge {
+    display: inline-block;
     font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    color: var(--muted);
-    line-height: 1.8;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--bg);
+    background: var(--amber);
+    padding: 4px 10px;
+    border-radius: 2px;
+    margin-bottom: 16px;
   }
-  .footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    text-align: right;
+
+  .stat-strip {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+    background: var(--border); margin-top: 28px; border: 1px solid var(--border);
   }
-  .footer-links a {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-    color: var(--amber);
-    text-decoration: none;
-    opacity: 0.8;
-    transition: opacity 0.2s;
+  .stat-cell { background: var(--bg2); padding: 20px; }
+  .stat-cell .n { font-family: 'JetBrains Mono', monospace; font-size: 24px; color: var(--amber); font-weight: 600; }
+  .stat-cell .l { font-size: 12px; color: var(--muted); margin-top: 4px; }
+
+  .footer {
+    border-top: 1px solid var(--border); padding: 32px 24px; max-width: 900px; margin: 0 auto;
+    display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; flex-wrap: wrap;
   }
+  .footer-brand { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; margin-bottom: 6px; }
+  .footer-meta { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); line-height: 1.8; }
+  .footer-links { display: flex; flex-direction: column; gap: 8px; text-align: right; }
+  .footer-links a { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--amber); text-decoration: none; opacity: 0.8; transition: opacity 0.2s; }
   .footer-links a:hover { opacity: 1; }
 
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(16px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
 
   @media (max-width: 600px) {
     .numbers-row { grid-template-columns: repeat(2, 1fr); }
@@ -520,178 +259,278 @@
     .footer { flex-direction: column; }
     .footer-links { text-align: left; }
     .cache-pos { font-size: 20px; width: 32px; }
+    .cat-name { width: 100px; font-size: 12px; }
+    .cat-val { width: 90px; font-size: 11px; }
+    .stat-strip { grid-template-columns: 1fr; }
+    .pipeline-step { gap: 12px; }
+    .pipeline-tag { display: none; }
   }
 </style>
 </head>
 <body>
 
-<!-- HEADER STRIP -->
 <div class="header-strip">
   <span class="brand">LUXVERSO RESEARCH</span>
-  <span>PNCP · INEXIGIBILIDADE · JAN–ABR 2026 · BAHIA</span>
+  <span>PUBLIC PROCUREMENT ANALYTICS · CASE STUDY #1 · BAHIA 2025</span>
 </div>
 
 <!-- HERO -->
 <div class="hero">
   <div class="hero-kicker">Transparência pública · Dados abertos</div>
-  <h1>R$ 160 milhões<br>em shows.<br><em>O São João<br>nem começou.</em></h1>
+  <h1>R$ 529,5 milhões<br>em shows.<br><em>Nenhuma outra<br>categoria gasta mais.</em></h1>
   <p class="hero-sub">
-    Prefeituras baianas contrataram <strong>1.408 shows e eventos artísticos</strong> entre janeiro e abril de 2026 — tudo via contrato direto sem licitação. 
-    O São João, maior concentração de gastos do calendário, ainda está por vir.
+    Em 2025, prefeituras baianas contrataram <strong>4.566 shows e apresentações artísticas</strong> — todos por contrato direto, sem licitação. 
+    É mais dinheiro do que qualquer prefeitura movimentou em consultoria, saúde ou locação de equipamentos pelo mesmo mecanismo.
   </p>
   <div class="numbers-row">
     <div class="number-cell">
-      <span class="n">R$ 160,6M</span>
-      <span class="label">em shows jan–abr 2026</span>
+      <span class="n">R$ 529,5M</span>
+      <span class="label">gasto com shows em 2025</span>
     </div>
     <div class="number-cell">
-      <span class="n">1.408</span>
+      <span class="n">4.566</span>
       <span class="label">contratos publicados</span>
     </div>
     <div class="number-cell">
-      <span class="n">157</span>
+      <span class="n">184</span>
       <span class="label">municípios envolvidos</span>
     </div>
     <div class="number-cell">
-      <span class="n">R$ 114k</span>
-      <span class="label">cachê médio por contrato</span>
+      <span class="n">R$ 116k</span>
+      <span class="label">cachê médio (mediana: R$70k)</span>
     </div>
   </div>
 </div>
 
-<!-- SEÇÃO 1: CONTEXTO -->
+<!-- SEÇÃO 01: A INFRAESTRUTURA -->
 <div class="section">
-  <div class="section-label">01 — O mecanismo</div>
-  <h2>Como prefeituras contratam artistas — sem licitação</h2>
+  <div class="section-label">01 — Por trás deste levantamento</div>
+  <h2>Como estes dados foram produzidos</h2>
   <p>
-    Todo contrato analisado aqui usa um mecanismo legal chamado <strong>inexigibilidade de licitação</strong>. 
-    Ele permite contratar sem processo competitivo quando o serviço tem natureza singular — como uma apresentação artística.
+    Os números acima não vêm de uma planilha montada à mão. Vêm de uma infraestrutura analítica que coleta, limpa, 
+    classifica e integra dados públicos de contratação municipal em escala — a <strong>LuxVerso Public Procurement Analytics</strong>.
   </p>
 
-  <div class="context-box">
-    <h3>O que é inexigibilidade?</h3>
-    <p>
-      A Lei de Licitações (Lei 14.133/2021) permite que prefeituras contratem artistas diretamente, sem concorrência, 
-      quando a prestação do serviço é considerada de <strong>natureza singular</strong> — ou seja, só aquele artista ou empresa pode executar.
-    </p>
-    <p>
-      Na prática, isso significa que uma prefeitura pode pagar <strong>R$ 900 mil por um show</strong> sem abrir edital, 
-      sem justificar a escolha do artista em comparação com outros, e sem processo competitivo de preços.
-    </p>
-    <p>
-      Isso não é necessariamente ilegal — mas é o mecanismo que <strong>torna o gasto invisível para a maioria da população</strong>. 
-      Todos os dados aqui são públicos, retirados do Portal Nacional de Contratações Públicas (PNCP).
-    </p>
+  <div class="pipeline-wrap">
+    <div class="pipeline-steps">
+      <div class="pipeline-step">
+        <div class="pipeline-num">1</div>
+        <div class="pipeline-body">
+          <div class="pipeline-name">Coleta automática — PNCP</div>
+          <div class="pipeline-desc">Extração via API pública do Portal Nacional de Contratações Públicas.</div>
+        </div>
+        <div class="pipeline-tag">gov.br/pncp</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="pipeline-num">2</div>
+        <div class="pipeline-body">
+          <div class="pipeline-name">Limpeza e normalização</div>
+          <div class="pipeline-desc">Padronização de municípios, valores e campos inconsistentes entre sistemas de origem.</div>
+        </div>
+        <div class="pipeline-tag">pipeline</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="pipeline-num">3</div>
+        <div class="pipeline-body">
+          <div class="pipeline-name">Classificação por categoria</div>
+          <div class="pipeline-desc">Cada contrato é classificado por objeto: artístico, consultoria, saúde, locação e outras seis categorias.</div>
+        </div>
+        <div class="pipeline-tag">nine categories</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="pipeline-num">4</div>
+        <div class="pipeline-body">
+          <div class="pipeline-name">Integração — IBGE</div>
+          <div class="pipeline-desc">População, PIB e PIB per capita associados a cada município.</div>
+        </div>
+        <div class="pipeline-tag">ibge.gov.br</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="pipeline-num">5</div>
+        <div class="pipeline-body">
+          <div class="pipeline-name">Integração — SICONFI</div>
+          <div class="pipeline-desc">Receita corrente líquida por município, usada para calcular gasto proporcional.</div>
+        </div>
+        <div class="pipeline-tag">Tesouro Nacional</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="pipeline-num">6</div>
+        <div class="pipeline-body">
+          <div class="pipeline-name">Dataset analítico</div>
+          <div class="pipeline-desc">Base unificada, pronta para consulta, comparação e monitoramento contínuo.</div>
+        </div>
+        <div class="pipeline-tag">CC BY 4.0</div>
+      </div>
+    </div>
   </div>
 
-  <div class="callout">
-    <strong>Por que isso importa:</strong> A inexigibilidade é legítima quando usada corretamente. 
-    O problema é a escala: R$ 160 milhões em 4 meses, em 157 municípios, sem nenhum painel centralizado que monitore esses gastos. 
-    Este levantamento existe para preencher esse vazio.
+  <div class="stat-strip">
+    <div class="stat-cell"><div class="n">3</div><div class="l">bases públicas integradas</div></div>
+    <div class="stat-cell"><div class="n">258</div><div class="l">municípios no dataset completo</div></div>
+    <div class="stat-cell"><div class="n">9</div><div class="l">categorias de contratação classificadas</div></div>
   </div>
 </div>
 
-<!-- SEÇÃO 2: SAZONALIDADE -->
+<!-- SEÇÃO 02: O RECORTE -->
 <div class="section">
-  <div class="section-label">02 — O calendário do gasto</div>
-  <h2>O São João como motor fiscal</h2>
+  <span class="badge">Case Study #1</span>
+  <div class="section-label">02 — O que este case study cobre</div>
+  <h2>Shows são um recorte de uma base maior</h2>
   <p>
-    O padrão de 2025 é claro: os gastos explodem em <strong>junho e julho</strong>, puxados pelo São João. 
-    Em 2026, os primeiros 4 meses já somam R$ 160M — e os contratos do São João ainda estão sendo publicados agora.
+    A infraestrutura acima já classifica <strong>R$ 2,06 bilhões</strong> em contratações diretas na Bahia em 2025, distribuídos em nove categorias. 
+    A análise a seguir isola apenas a categoria artística — a maior delas por valor.
+  </p>
+
+  <div class="cat-list">
+    <div class="cat-row is-shows">
+      <div class="cat-name">Artístico</div>
+      <div class="cat-bar-bg"><div class="cat-bar-fill" style="width:100%"></div></div>
+      <div class="cat-val">R$ 529,5M · 25,8%</div>
+    </div>
+    <div class="cat-row">
+      <div class="cat-name">Outros</div>
+      <div class="cat-bar-bg"><div class="cat-bar-fill" style="width:77%"></div></div>
+      <div class="cat-val">R$ 408,8M · 19,9%</div>
+    </div>
+    <div class="cat-row">
+      <div class="cat-name">Consultoria</div>
+      <div class="cat-bar-bg"><div class="cat-bar-fill" style="width:75%"></div></div>
+      <div class="cat-val">R$ 397,5M · 19,3%</div>
+    </div>
+    <div class="cat-row">
+      <div class="cat-name">Aquisição</div>
+      <div class="cat-bar-bg"><div class="cat-bar-fill" style="width:51%"></div></div>
+      <div class="cat-val">R$ 267,6M · 13,0%</div>
+    </div>
+    <div class="cat-row">
+      <div class="cat-name">Locação</div>
+      <div class="cat-bar-bg"><div class="cat-bar-fill" style="width:33%"></div></div>
+      <div class="cat-val">R$ 174,7M · 8,5%</div>
+    </div>
+    <div class="cat-row">
+      <div class="cat-name">Saúde</div>
+      <div class="cat-bar-bg"><div class="cat-bar-fill" style="width:27%"></div></div>
+      <div class="cat-val">R$ 142,8M · 7,0%</div>
+    </div>
+    <div class="cat-row">
+      <div class="cat-name">Manutenção</div>
+      <div class="cat-bar-bg"><div class="cat-bar-fill" style="width:11%"></div></div>
+      <div class="cat-val">R$ 59,5M · 2,9%</div>
+    </div>
+    <div class="cat-row">
+      <div class="cat-name">Capacitação</div>
+      <div class="cat-bar-bg"><div class="cat-bar-fill" style="width:7%"></div></div>
+      <div class="cat-val">R$ 39,4M · 1,9%</div>
+    </div>
+    <div class="cat-row">
+      <div class="cat-name">Credenciamento</div>
+      <div class="cat-bar-bg"><div class="cat-bar-fill" style="width:7%"></div></div>
+      <div class="cat-val">R$ 35,6M · 1,7%</div>
+    </div>
+  </div>
+
+  <div class="pill-grid">
+    <div class="pill active">Contratações artísticas ← este case study</div>
+    <div class="pill">Consultorias</div>
+    <div class="pill">Locação de equipamentos</div>
+    <div class="pill">Saúde</div>
+    <div class="pill">Aquisições</div>
+    <div class="pill">Capacitação</div>
+    <div class="pill">Credenciamento</div>
+    <div class="pill">Manutenção</div>
+  </div>
+</div>
+
+<!-- SEÇÃO 03: MECANISMO (RESUMIDO) -->
+<div class="section">
+  <div class="section-label">03 — Agora, o caso dos shows</div>
+  <h2>Contratação direta via inexigibilidade</h2>
+  <p>
+    Os contratos analisados abaixo utilizam a modalidade de <strong>inexigibilidade de licitação</strong>, prevista na 
+    Lei 14.133/2021, Art. 74, inciso III — aplicável quando a contratação envolve serviço artístico de natureza singular. 
+    A modalidade dispensa concorrência formal entre fornecedores.
+  </p>
+
+  <div class="callout">
+    A análise a seguir cobre os R$ 529,5M classificados como categoria artística, em 4.566 contratos publicados entre 
+    janeiro e julho de 2025, distribuídos em 184 municípios.
+  </div>
+</div>
+
+<!-- SEÇÃO 04: SAZONALIDADE -->
+<div class="section">
+  <div class="section-label">04 — O calendário do gasto</div>
+  <h2>Concentração no trimestre junino</h2>
+  <p>
+    Os dados mostram concentração de gasto em <strong>maio, junho e julho</strong>, período que coincide com os festejos juninos 
+    na maioria dos municípios baianos.
   </p>
 
   <div class="season-wrap">
-    <div style="font-size: 13px; color: var(--muted); margin-bottom: 4px;">Distribuição estimada de gastos artísticos · Bahia 2025–2026</div>
+    <div style="font-size: 13px; color: var(--muted); margin-bottom: 4px;">Gasto mensal com contratações artísticas · Bahia 2025 (jan–jul)</div>
     <div class="season-bars">
-      <!-- 2025 bars, estimated distribution -->
       <div class="season-bar-wrap">
-        <div class="season-val">R$ 38M</div>
-        <div class="season-bar dim" style="height: 30%"></div>
+        <div class="season-val">R$ 16,7M</div>
+        <div class="season-bar dim" style="height: 11%"></div>
         <div class="season-label">Jan</div>
       </div>
       <div class="season-bar-wrap">
-        <div class="season-val">R$ 42M</div>
-        <div class="season-bar dim" style="height: 34%"></div>
+        <div class="season-val">R$ 39,1M</div>
+        <div class="season-bar dim" style="height: 26%"></div>
         <div class="season-label">Fev</div>
       </div>
       <div class="season-bar-wrap">
-        <div class="season-val">R$ 28M</div>
-        <div class="season-bar dim" style="height: 22%"></div>
+        <div class="season-val">R$ 44,6M</div>
+        <div class="season-bar dim" style="height: 29%"></div>
         <div class="season-label">Mar</div>
       </div>
       <div class="season-bar-wrap">
-        <div class="season-val">R$ 21M</div>
-        <div class="season-bar dim" style="height: 17%"></div>
+        <div class="season-val">R$ 59,2M</div>
+        <div class="season-bar dim" style="height: 39%"></div>
         <div class="season-label">Abr</div>
       </div>
       <div class="season-bar-wrap">
-        <div class="season-val">R$ 52M</div>
-        <div class="season-bar dim" style="height: 42%"></div>
+        <div class="season-val">R$ 110,0M</div>
+        <div class="season-bar highlight" style="height: 72%"></div>
         <div class="season-label">Mai</div>
       </div>
       <div class="season-bar-wrap">
-        <div class="season-val">R$ 160M</div>
+        <div class="season-val">R$ 151,6M</div>
         <div class="season-bar highlight" style="height: 100%"></div>
         <div class="season-label">Jun ★</div>
       </div>
       <div class="season-bar-wrap">
-        <div class="season-val">R$ 95M</div>
-        <div class="season-bar highlight" style="height: 59%"></div>
+        <div class="season-val">R$ 107,8M</div>
+        <div class="season-bar highlight" style="height: 71%"></div>
         <div class="season-label">Jul</div>
       </div>
       <div class="season-bar-wrap">
-        <div class="season-val">R$ 38M</div>
-        <div class="season-bar dim" style="height: 24%"></div>
-        <div class="season-label">Ago</div>
-      </div>
-      <div class="season-bar-wrap">
-        <div class="season-val">R$ 22M</div>
-        <div class="season-bar dim" style="height: 14%"></div>
-        <div class="season-label">Set</div>
-      </div>
-      <div class="season-bar-wrap">
-        <div class="season-val">R$ 19M</div>
-        <div class="season-bar dim" style="height: 12%"></div>
-        <div class="season-label">Out</div>
-      </div>
-      <div class="season-bar-wrap">
-        <div class="season-val">R$ 58M</div>
-        <div class="season-bar dim" style="height: 36%"></div>
-        <div class="season-label">Nov</div>
-      </div>
-      <div class="season-bar-wrap">
-        <div class="season-val">R$ 36M</div>
-        <div class="season-bar dim" style="height: 23%"></div>
-        <div class="season-label">Dez</div>
-      </div>
-      <div style="width: 1px; background: var(--border); height: 120px; align-self: flex-end;"></div>
-      <div class="season-bar-wrap">
-        <div class="season-val" style="color:var(--amber)">R$ 160M</div>
-        <div class="season-bar future" style="height: 100%"></div>
-        <div class="season-label" style="color:var(--amber)">2026★</div>
+        <div class="season-val">R$ 0,5M</div>
+        <div class="season-bar partial" style="height: 1%"></div>
+        <div class="season-label">Ago*</div>
       </div>
     </div>
     <div class="season-annotation">
-      <span><span class="dot amber"></span> São João (jun/jul 2025)</span>
-      <span><span class="dot dim-dot"></span> Resto de 2025</span>
-      <span><span class="dot dashed"></span> Jan–Abr 2026 (em andamento)</span>
+      <span><span class="dot amber"></span> Trimestre junino (mai–jul)</span>
+      <span><span class="dot dim-dot"></span> Resto do ano</span>
+      <span><span class="dot dashed"></span> Coleta parcial</span>
     </div>
     <div style="font-size: 11px; color: var(--muted); margin-top: 12px; font-family: 'JetBrains Mono', monospace;">
-      * Distribuição 2025 estimada. Junho 2026 não está contabilizado nos R$ 160M — contratos em publicação.
+      * Agosto/2025 tem 5 contratos na base — limite da janela de coleta atual.
     </div>
   </div>
 
   <div class="callout">
-    <strong>O que os dados revelam:</strong> Os R$ 160M de janeiro a abril de 2026 já superam <em>qualquer</em> mês de 2025 exceto junho e julho. 
-    Isso sugere aceleração do gasto — ou antecipação de contratos do São João que ainda não apareceram no sistema.
+    Maio, junho e julho somam <strong>R$ 369,4M — 70% do total anual</strong>. O volume de contratos publicados nesse 
+    período (3.076 no trimestre) dificulta análises manuais individuais.
   </div>
 </div>
 
-<!-- SEÇÃO 3: TOP MUNICÍPIOS -->
+<!-- SEÇÃO 05: TOP MUNICÍPIOS -->
 <div class="section">
-  <div class="section-label">03 — Quem mais gastou</div>
-  <h2>Top municípios por gasto em shows · Jan–Abr 2026</h2>
-  <p>Municípios do interior lideram o ranking — não a capital. Paramirim (25 mil hab.) ocupa o 3º lugar.</p>
+  <div class="section-label">05 — Quem mais gastou</div>
+  <h2>Top municípios por gasto em shows · 2025</h2>
+  <p>Salvador lidera em valor absoluto. O gasto per capita segue uma distribuição diferente, detalhada na seção seguinte.</p>
 
   <table class="rank-table">
     <thead>
@@ -706,333 +545,296 @@
     <tbody>
       <tr>
         <td class="rank-num">01</td>
-        <td><div class="rank-name">Ilhéus</div><div class="rank-sub">Pop. estimada: 158 mil hab.</div></td>
-        <td>31</td>
-        <td class="rank-value">R$ 6,2M</td>
+        <td><div class="rank-name">Salvador</div><div class="rank-sub">Pop.: 2.568.928 hab. · R$ 32,47/hab</div></td>
+        <td>501</td>
+        <td class="rank-value">R$ 83,4M</td>
         <td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:100%"></div></div></td>
       </tr>
       <tr>
         <td class="rank-num">02</td>
-        <td><div class="rank-name">Porto Seguro</div><div class="rank-sub">Pop. estimada: 181 mil hab.</div></td>
-        <td>94</td>
-        <td class="rank-value">R$ 6,1M</td>
-        <td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:98%"></div></div></td>
+        <td><div class="rank-name">Feira de Santana</div><div class="rank-sub">Pop.: 657.948 hab. · R$ 18,98/hab</div></td>
+        <td>152</td>
+        <td class="rank-value">R$ 12,5M</td>
+        <td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:15%"></div></div></td>
       </tr>
       <tr>
         <td class="rank-num">03</td>
-        <td><div class="rank-name">Paramirim</div><div class="rank-sub">Pop. estimada: 25 mil hab. ⚠</div></td>
-        <td>92</td>
-        <td class="rank-value">R$ 5,9M</td>
-        <td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:95%"></div></div></td>
+        <td><div class="rank-name">Irecê</div><div class="rank-sub">Pop.: 78.425 hab. · R$ 130,72/hab ⚠</div></td>
+        <td>40</td>
+        <td class="rank-value">R$ 10,3M</td>
+        <td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:12%"></div></div></td>
       </tr>
       <tr>
         <td class="rank-num">04</td>
-        <td><div class="rank-name">Correntina</div><div class="rank-sub">Pop. estimada: 35 mil hab. ⚠</div></td>
-        <td>20</td>
-        <td class="rank-value">R$ 5,9M</td>
-        <td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:95%"></div></div></td>
+        <td><div class="rank-name">Conceição do Jacuípe</div><div class="rank-sub">Pop.: 37.409 hab. · R$ 264,91/hab ⚠</div></td>
+        <td>47</td>
+        <td class="rank-value">R$ 9,9M</td>
+        <td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:12%"></div></div></td>
       </tr>
       <tr>
         <td class="rank-num">05</td>
-        <td><div class="rank-name">Santo Amaro</div><div class="rank-sub">Pop. estimada: 54 mil hab.</div></td>
-        <td>38</td>
-        <td class="rank-value">R$ 5,7M</td>
-        <td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:92%"></div></div></td>
+        <td><div class="rank-name">Cruz das Almas</div><div class="rank-sub">Pop.: 63.203 hab. · R$ 153,00/hab ⚠</div></td>
+        <td>32</td>
+        <td class="rank-value">R$ 9,7M</td>
+        <td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:12%"></div></div></td>
       </tr>
       <tr>
         <td class="rank-num">06</td>
-        <td><div class="rank-name">João Dourado</div><div class="rank-sub">Pop. estimada: 40 mil hab.</div></td>
-        <td>35</td>
-        <td class="rank-value">R$ 5,6M</td>
-        <td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:90%"></div></div></td>
+        <td><div class="rank-name">Jequié</div><div class="rank-sub">Pop.: 168.733 hab. · R$ 53,70/hab</div></td>
+        <td>45</td>
+        <td class="rank-value">R$ 9,1M</td>
+        <td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:11%"></div></div></td>
       </tr>
       <tr>
         <td class="rank-num">07</td>
-        <td><div class="rank-name">Itaparica</div><div class="rank-sub">Pop. estimada: 23 mil hab. ⚠</div></td>
-        <td>32</td>
-        <td class="rank-value">R$ 5,2M</td>
-        <td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:84%"></div></div></td>
+        <td><div class="rank-name">Porto Seguro</div><div class="rank-sub">Pop.: 181.007 hab. · R$ 49,25/hab</div></td>
+        <td>225</td>
+        <td class="rank-value">R$ 8,9M</td>
+        <td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:11%"></div></div></td>
       </tr>
       <tr>
         <td class="rank-num">08</td>
-        <td><div class="rank-name">Mata de São João</div><div class="rank-sub">Pop. estimada: 48 mil hab.</div></td>
-        <td>18</td>
-        <td class="rank-value">R$ 4,5M</td>
-        <td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:73%"></div></div></td>
+        <td><div class="rank-name">Barreiras</div><div class="rank-sub">Pop.: 170.667 hab. · R$ 48,40/hab</div></td>
+        <td>41</td>
+        <td class="rank-value">R$ 8,3M</td>
+        <td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:10%"></div></div></td>
       </tr>
       <tr>
         <td class="rank-num">09</td>
-        <td><div class="rank-name">Nordestina</div><div class="rank-sub">Pop. estimada: 9 mil hab. ⚠</div></td>
-        <td>19</td>
-        <td class="rank-value">R$ 4,0M</td>
-        <td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:65%"></div></div></td>
+        <td><div class="rank-name">Santo Antônio de Jesus</div><div class="rank-sub">Pop.: 109.267 hab. · R$ 74,33/hab</div></td>
+        <td>24</td>
+        <td class="rank-value">R$ 8,1M</td>
+        <td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:10%"></div></div></td>
       </tr>
       <tr>
         <td class="rank-num">10</td>
-        <td><div class="rank-name">Queimadas</div><div class="rank-sub">Pop. estimada: 30 mil hab.</div></td>
-        <td>24</td>
-        <td class="rank-value">R$ 3,9M</td>
-        <td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:63%"></div></div></td>
+        <td><div class="rank-name">Ipiaú</div><div class="rank-sub">Pop.: 42.507 hab. · R$ 164,92/hab ⚠</div></td>
+        <td>25</td>
+        <td class="rank-value">R$ 7,0M</td>
+        <td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:8%"></div></div></td>
       </tr>
     </tbody>
   </table>
 
   <div style="margin-top: 12px; font-size: 11px; color: var(--muted); font-family: 'JetBrains Mono', monospace;">
-    ⚠ Municípios com gasto desproporcional à população. Salvador não aparece no top 10.
+    ⚠ Gasto per capita acima de 4x o de Salvador.
   </div>
 </div>
 
-<!-- SEÇÃO 4: OUTLIERS -->
+<!-- SEÇÃO 06: OUTLIERS -->
 <div class="section">
-  <div class="section-label">04 — Cidades fora da curva</div>
-  <h2>Quando o tamanho da cidade não explica o gasto</h2>
+  <div class="section-label">06 — Gasto por habitante</div>
+  <h2>O tamanho da cidade não explica o gasto</h2>
   <p>
-    O padrão mais significativo não está nas cidades grandes — está nas pequenas que gastam como grandes. 
-    Esses municípios concentram os maiores <strong>gastos per capita</strong> e as maiores <strong>proporções do orçamento</strong> em eventos.
+    Salvador concentra o maior volume absoluto, mas o gasto por habitante (R$ 32,47) é inferior ao de vários municípios menores.
   </p>
 
   <div class="outlier-grid">
     <div class="outlier-card">
-      <div class="outlier-city">Correntina</div>
-      <div class="outlier-state">35 mil hab. · Oeste baiano</div>
-      <div class="outlier-stat">+388%</div>
-      <div class="outlier-desc">
-        Crescimento de 2025 para 2026 (jan–abr). De <strong>R$ 1,2M para R$ 5,9M</strong>. 
-        O Carnaval 2026 incluiu Zé Neto e Cristiano por R$ 904 mil e Xanddy Harmonia por R$ 700 mil.
-      </div>
-    </div>
-    <div class="outlier-card">
-      <div class="outlier-city">Paramirim</div>
-      <div class="outlier-state">25 mil hab. · Centro-sul baiano</div>
-      <div class="outlier-stat">92 shows</div>
-      <div class="outlier-desc">
-        92 contratos artísticos em 4 meses — quase <strong>um show por dia útil</strong>. 
-        R$ 5,9M gastos por um município de 25 mil habitantes é R$ 236 por habitante.
-      </div>
-    </div>
-    <div class="outlier-card">
-      <div class="outlier-city">Nordestina</div>
-      <div class="outlier-state">9 mil hab. · Nordeste baiano</div>
-      <div class="outlier-stat">R$ 444/hab</div>
-      <div class="outlier-desc">
-        R$ 4M em shows para uma cidade de 9 mil pessoas. 
-        Proporcionalmente, é <strong>76x mais</strong> que Salvador (R$ 5,8/hab em 2025).
-      </div>
-    </div>
-    <div class="outlier-card">
       <div class="outlier-city">Itaparica</div>
-      <div class="outlier-state">23 mil hab. · Baía de Todos os Santos</div>
+      <div class="outlier-state">20.369 hab. · Baía de Todos os Santos</div>
+      <div class="outlier-stat">R$ 339/hab</div>
+      <div class="outlier-desc">
+        <strong>10,5x</strong> o per capita de Salvador. R$ 6,9M em 29 contratos, incluindo R$ 900 mil para o cantor Nattan no Pedrão 2025.
+      </div>
+    </div>
+    <div class="outlier-card">
+      <div class="outlier-city">Conceição do Jacuípe</div>
+      <div class="outlier-state">37.409 hab. · Região metropolitana de Feira</div>
+      <div class="outlier-stat">R$ 265/hab</div>
+      <div class="outlier-desc">
+        <strong>8,2x</strong> o per capita de Salvador. R$ 9,9M em 47 contratos, incluindo R$ 900 mil para a banda Jorge e Mateus.
+      </div>
+    </div>
+    <div class="outlier-card">
+      <div class="outlier-city">Quijingue</div>
+      <div class="outlier-state">26.457 hab. · Nordeste baiano</div>
+      <div class="outlier-stat">R$ 258/hab</div>
+      <div class="outlier-desc">
+        <strong>8x</strong> o per capita de Salvador. R$ 6,8M em 44 contratos artísticos.
+      </div>
+    </div>
+    <div class="outlier-card">
+      <div class="outlier-city">Cachoeira</div>
+      <div class="outlier-state">30.550 hab. · Recôncavo Baiano</div>
       <div class="outlier-stat">R$ 226/hab</div>
       <div class="outlier-desc">
-        Itaparica gastou R$ 5,2M em shows em 2026. Em 2025, foi <strong>R$ 613 por habitante</strong> — 
-        106x mais que Salvador em termos relativos.
+        <strong>7x</strong> o per capita de Salvador. 155 contratos artísticos — o segundo maior número de eventos do estado.
       </div>
     </div>
   </div>
 </div>
 
-<!-- SEÇÃO 5: MAIORES CACHÊS -->
+<!-- SEÇÃO 07: MAIORES CACHÊS -->
 <div class="section">
-  <div class="section-label">05 — Os maiores cachês</div>
+  <div class="section-label">07 — Os maiores cachês</div>
   <h2>Contratos individuais identificados</h2>
-  <p>Estes são os contratos de valor mais alto identificados no dataset — cada um, um único evento.</p>
+  <p>Valores mais altos do dataset, extraídos diretamente da descrição do objeto de cada contrato.</p>
 
   <div style="margin-top: 28px;">
     <div class="cache-item">
       <div class="cache-pos">01</div>
       <div class="cache-info">
-        <div class="cache-artist">Zé Neto e Cristiano</div>
-        <div class="cache-context">Correntina · Carnaval 2026</div>
+        <div class="cache-artist">Toca do Vale</div>
+        <div class="cache-context">Glória · Show em praça pública, jun/2025</div>
       </div>
-      <div class="cache-val">R$ 904k</div>
+      <div class="cache-val">R$ 2,5M</div>
     </div>
     <div class="cache-item">
       <div class="cache-pos">02</div>
       <div class="cache-info">
-        <div class="cache-artist">Ana Castela</div>
-        <div class="cache-context">Irecê · São João 2026</div>
+        <div class="cache-artist">Wesley Safadão</div>
+        <div class="cache-context">Jequié · São João 2025</div>
       </div>
-      <div class="cache-val">R$ 900k</div>
+      <div class="cache-val">R$ 1,1M</div>
     </div>
     <div class="cache-item">
       <div class="cache-pos">03</div>
       <div class="cache-info">
-        <div class="cache-artist">Pablo</div>
-        <div class="cache-context">Porto Seguro · Carnaval 2026</div>
+        <div class="cache-artist">Wesley Safadão</div>
+        <div class="cache-context">Cruz das Almas · São João 2025</div>
       </div>
-      <div class="cache-val">R$ 750k</div>
+      <div class="cache-val">R$ 1,1M</div>
     </div>
     <div class="cache-item">
       <div class="cache-pos">04</div>
       <div class="cache-info">
-        <div class="cache-artist">Natanzinho Lima</div>
-        <div class="cache-context">Vera Cruz · Bye Bye Verão</div>
+        <div class="cache-artist">Sinho Ferrary</div>
+        <div class="cache-context">Iramaia · Festejos culturais 2025</div>
       </div>
-      <div class="cache-val">R$ 750k</div>
+      <div class="cache-val">R$ 1,0M</div>
     </div>
     <div class="cache-item">
       <div class="cache-pos">05</div>
       <div class="cache-info">
-        <div class="cache-artist">Pablo</div>
-        <div class="cache-context">Queimadas · Lavagem 2026</div>
+        <div class="cache-artist">Jorge e Mateus</div>
+        <div class="cache-context">Santo Antônio de Jesus · São João 2025</div>
       </div>
-      <div class="cache-val">R$ 704k</div>
+      <div class="cache-val">R$ 900k</div>
     </div>
     <div class="cache-item">
       <div class="cache-pos">06</div>
       <div class="cache-info">
-        <div class="cache-artist">Xanddy Harmonia</div>
-        <div class="cache-context">Correntina · Carnaval 2026</div>
+        <div class="cache-artist">Nattan</div>
+        <div class="cache-context">Itaparica · Pedrão 2025</div>
       </div>
-      <div class="cache-val">R$ 700k</div>
+      <div class="cache-val">R$ 900k</div>
     </div>
     <div class="cache-item">
       <div class="cache-pos">07</div>
       <div class="cache-info">
-        <div class="cache-artist">Calcinha Preta</div>
-        <div class="cache-context">Iraquara · São João 2026</div>
+        <div class="cache-artist">Jorge e Mateus</div>
+        <div class="cache-context">Conceição do Jacuípe · São João 2025</div>
       </div>
-      <div class="cache-val">R$ 646k</div>
+      <div class="cache-val">R$ 900k</div>
     </div>
-    <div class="cache-item">
-      <div class="cache-pos">08</div>
-      <div class="cache-info">
-        <div class="cache-artist">Xand Avião</div>
-        <div class="cache-context">Malhada · Santa Cruz</div>
-      </div>
-      <div class="cache-val">R$ 650k</div>
-    </div>
+  </div>
+
+  <div class="callout muted-border" style="margin-top: 28px;">
+    Três contratos de alto valor — dois deles em Salvador, de R$ 2,0M e R$ 1,79M — têm como descrição do objeto apenas 
+    <em>"Produção Artística em Geral"</em>, sem identificação de artista, evento ou data.
   </div>
 </div>
 
-<!-- SEÇÃO 6: REDE DE ARTISTAS -->
+<!-- SEÇÃO 08: REDE DE ARTISTAS -->
 <div class="section">
-  <div class="section-label">06 — Rede de artistas</div>
-  <h2>Quem recebe de mais prefeituras</h2>
+  <div class="section-label">08 — Rede de artistas</div>
+  <h2>Recorrência entre municípios</h2>
   <p>
-    Estes artistas não foram contratados por uma prefeitura — foram contratados por várias, 
-    muitas vezes no mesmo período. Cada ponto indica uma prefeitura diferente.
+    Os artistas abaixo aparecem em contratos de múltiplas prefeituras. Cada ponto indica um município diferente.
   </p>
 
   <div style="margin-top: 28px;">
     <div class="artist-row">
       <div class="artist-pos">01</div>
-      <div class="artist-name">Pablo</div>
-      <div class="artist-cities">
-        <div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div>
-      </div>
-      <div>
-        <div class="artist-val">R$ 2,1M</div>
-        <div class="artist-sub">3 prefeituras</div>
-      </div>
+      <div class="artist-name">Simone Mendes</div>
+      <div class="artist-cities"><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div></div>
+      <div><div class="artist-val">R$ 4,0M</div><div class="artist-sub">5 municípios</div></div>
     </div>
     <div class="artist-row">
       <div class="artist-pos">02</div>
-      <div class="artist-name">Tayrone</div>
-      <div class="artist-cities">
-        <div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div>
-      </div>
-      <div>
-        <div class="artist-val">R$ 1,6M</div>
-        <div class="artist-sub">5 prefeituras</div>
-      </div>
+      <div class="artist-name">Pablo</div>
+      <div class="artist-cities"><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div></div>
+      <div><div class="artist-val">R$ 3,7M</div><div class="artist-sub">8 municípios</div></div>
     </div>
     <div class="artist-row">
       <div class="artist-pos">03</div>
-      <div class="artist-name">Psirico</div>
-      <div class="artist-cities">
-        <div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div>
-      </div>
-      <div>
-        <div class="artist-val">R$ 1,3M</div>
-        <div class="artist-sub">4 prefeituras</div>
-      </div>
+      <div class="artist-name">João Gomes</div>
+      <div class="artist-cities"><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div></div>
+      <div><div class="artist-val">R$ 3,5M</div><div class="artist-sub">6 municípios</div></div>
     </div>
     <div class="artist-row">
       <div class="artist-pos">04</div>
-      <div class="artist-name">Eduardo Costa</div>
-      <div class="artist-cities">
-        <div class="city-dot"></div><div class="city-dot"></div>
-      </div>
-      <div>
-        <div class="artist-val">R$ 1,1M</div>
-        <div class="artist-sub">2 prefeituras</div>
-      </div>
+      <div class="artist-name">Nattan</div>
+      <div class="artist-cities"><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div></div>
+      <div><div class="artist-val">R$ 3,5M</div><div class="artist-sub">4 municípios</div></div>
     </div>
     <div class="artist-row">
       <div class="artist-pos">05</div>
-      <div class="artist-name">Saia Rodada</div>
-      <div class="artist-cities">
-        <div class="city-dot"></div><div class="city-dot"></div>
-      </div>
-      <div>
-        <div class="artist-val">R$ 930k</div>
-        <div class="artist-sub">2 prefeituras</div>
-      </div>
+      <div class="artist-name">Toca do Vale</div>
+      <div class="artist-cities"><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div></div>
+      <div><div class="artist-val">R$ 3,45M</div><div class="artist-sub">3 municípios</div></div>
     </div>
     <div class="artist-row">
       <div class="artist-pos">06</div>
-      <div class="artist-name">Nadson o Ferinha</div>
-      <div class="artist-cities">
-        <div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div>
-      </div>
-      <div>
-        <div class="artist-val">R$ 860k</div>
-        <div class="artist-sub">3 prefeituras</div>
-      </div>
+      <div class="artist-name">Zé Vaqueiro</div>
+      <div class="artist-cities"><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div></div>
+      <div><div class="artist-val">R$ 2,89M</div><div class="artist-sub">7 municípios</div></div>
     </div>
     <div class="artist-row">
       <div class="artist-pos">07</div>
-      <div class="artist-name">Toque Dez</div>
-      <div class="artist-cities">
-        <div class="city-dot"></div><div class="city-dot"></div>
-      </div>
-      <div>
-        <div class="artist-val">R$ 850k</div>
-        <div class="artist-sub">2 prefeituras</div>
-      </div>
+      <div class="artist-name">Tarcísio do Acordeon</div>
+      <div class="artist-cities"><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div></div>
+      <div><div class="artist-val">R$ 2,7M</div><div class="artist-sub">6 municípios</div></div>
     </div>
     <div class="artist-row">
       <div class="artist-pos">08</div>
-      <div class="artist-name">Durval Lelys</div>
-      <div class="artist-cities">
-        <div class="city-dot"></div><div class="city-dot"></div>
-      </div>
-      <div>
-        <div class="artist-val">R$ 800k</div>
-        <div class="artist-sub">2 prefeituras</div>
-      </div>
+      <div class="artist-name">Limão com Mel</div>
+      <div class="artist-cities"><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div><div class="city-dot"></div></div>
+      <div><div class="artist-val">R$ 2,11M</div><div class="artist-sub">9 municípios</div></div>
     </div>
   </div>
 
-  <div class="callout" style="margin-top: 28px;">
-    <strong>Padrão relevante:</strong> Em 2025, o Toque Dez foi contratado por <strong>45 municípios diferentes</strong> — 
-    uma em cada seis cidades da Bahia. Esse nível de concentração em um único artista, sem processo competitivo, 
-    é exatamente o tipo de padrão que sistemas automatizados conseguem detectar e auditorias manuais não.
+  <div class="callout">
+    Limão com Mel aparece em <strong>9 municípios diferentes</strong> em 2025 — a maior dispersão geográfica do dataset. 
+    Esse tipo de padrão de recorrência só é visível a partir de análise agregada; contrato por contrato, ele fica invisível.
   </div>
 </div>
 
-<!-- SEÇÃO 7: METODOLOGIA -->
+<!-- SEÇÃO 09: CONCLUSÕES -->
 <div class="section">
-  <div class="section-label">07 — Metodologia e limites</div>
-  <h2>Como esses dados foram coletados</h2>
-  <p>
-    Todos os contratos foram extraídos via <strong>API pública do PNCP</strong>, 
-    filtrados pela modalidade inexigibilidade (código 9) e classificados por processamento de linguagem natural 
-    para identificar contratos artísticos.
+  <div class="section-label">09 — Conclusões</div>
+  <h2>O que os dados mostram</h2>
+
+  <div class="stat-strip">
+    <div class="stat-cell"><div class="n">25,8%</div><div class="l">de tudo contratado por inexigibilidade na Bahia em 2025 foi artístico</div></div>
+    <div class="stat-cell"><div class="n">70%</div><div class="l">do gasto artístico concentrado em maio–julho</div></div>
+    <div class="stat-cell"><div class="n">10,5x</div><div class="l">maior gasto per capita de um outlier vs. Salvador</div></div>
+  </div>
+
+  <p style="margin-top: 28px;">
+    Este é o primeiro estudo produzido pela infraestrutura LuxVerso. O mesmo pipeline que gerou esta análise 
+    já cobre outras oito categorias de contratação municipal e está em expansão para monitoramento contínuo.
   </p>
+</div>
+
+<!-- SEÇÃO 10: EXPLORADORES -->
+<div class="section" style="border-bottom: none;">
+  <div class="section-label">10 — Explore a infraestrutura</div>
+  <h2>Acesso público aos dados e ferramentas</h2>
+  <p>Os exploradores abaixo permitem consultar o dataset completo, por município, fornecedor ou categoria.</p>
 
   <div style="margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
     <div class="callout" style="margin: 0;">
-      <strong>Período:</strong> Janeiro a Abril de 2026<br>
-      <strong>Escopo:</strong> Municípios baianos<br>
+      <strong>Período:</strong> Janeiro a julho de 2025<br>
+      <strong>Escopo:</strong> 184 municípios com contratação artística<br>
       <strong>Fonte primária:</strong> PNCP (gov.br/pncp)<br>
-      <strong>Fonte secundária:</strong> IBGE + SICONFI
+      <strong>Fontes secundárias:</strong> IBGE + SICONFI
     </div>
-    <div class="callout" style="margin: 0; border-color: var(--muted);">
-      <strong>Limitações:</strong> Contratos do São João 2026 ainda em publicação. 
-      Valores per capita usam estimativas populacionais de 2022. 
-      Classificação artística tem precisão de ~94%.
+    <div class="callout muted-border" style="margin: 0;">
+      <strong>Notas metodológicas:</strong> agosto/2025 em diante ainda não coletado por completo. 
+      6 registros marcados como outlier estatístico foram excluídos da categoria artística. 
+      Nomes de artistas extraídos da descrição do objeto no PNCP.
     </div>
   </div>
 </div>
@@ -1043,13 +845,13 @@
     <div class="footer-brand">LuxVerso Research</div>
     <div class="footer-meta">
       Salvador · Bahia · Brasil<br>
-      Dados: PNCP · IBGE · SICONFI<br>
-      Atualizado: Abr/2026<br>
+      Open analytical infrastructure for public procurement<br>
+      Dados: PNCP · IBGE · SICONFI · CC BY 4.0<br>
       viniburilux@gmail.com
     </div>
   </div>
   <div class="footer-links">
-    <a href="https://viniburilux.github.io/explorador-dados-bahia/">→ Explorador completo 2025–2026</a>
+    <a href="https://viniburilux.github.io/explorador-dados-bahia/">→ Explorador completo</a>
     <a href="https://viniburilux.github.io/monitor-gastos-pncp/">→ Monitor de gastos (infraestrutura)</a>
     <a href="https://gastos-reais-ba.streamlit.app/">→ Análise por município</a>
     <a href="https://github.com/viniburilux/gastos-reais-ba">→ Dados no GitHub</a>
