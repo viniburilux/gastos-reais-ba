@@ -1,5 +1,25 @@
 # LuxVerso Public Procurement Analytics
 
+           PNCP
+             │
+             ▼
+     Data Collection
+             │
+             ▼
+ Data Cleaning & Classification
+             │
+             ▼
+      IBGE Integration
+             │
+             ▼
+    SICONFI Integration
+             │
+             ▼
+ Analytical Dataset
+             │
+             ▼
+ Dashboards • Research • Monitoring
+ 
 Open infrastructure for municipal public procurement analysis in Brazil.
 
 LuxVerso Public Finance is an open research initiative that integrates multiple Brazilian public datasets into a unified analytical database for exploring municipal public spending.
